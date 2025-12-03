@@ -1,3 +1,45 @@
 /**
 * Lightbox
 */
+
+img[data-full-img] {
+    cursor: pointer;
+}
+
+#lightbox {
+    border: none;
+    padding: 2;
+    background-color: white;
+    transform-origin: center center;
+    transform: scale(1);
+    opacity: 1;
+}
+
+#lightbox[open] {
+    animation: Mise-A-l-Echelle 600ms ease forwards, ouverture-opacity 600ms ease forwards;
+}
+
+@keyframes Mise-a-l-Echelle{
+    from {
+        transform: scale(0.1);
+    }
+}
+
+@keyframes fermeture {
+    from {
+        opacity: 0;
+    }
+}
+
+dialog#lightbox::backdrop {
+
+    animation: fremeture 3s ease forwards;
+    background-color: salmon;
+}
+
+#lightbox img {
+    max-width: 90vw;
+    max-height: 80vh;
+    display: block;
+    margin: 0 auto;
+}
