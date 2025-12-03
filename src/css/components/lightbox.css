@@ -34,7 +34,7 @@ img[data-full-img] {
 dialog#lightbox::backdrop {
 
     animation: fremeture 3s ease forwards;
-    background-color: salmon;
+    background-color: rgba(243, 161, 161, 0.6)
 }
 
 #lightbox img {
